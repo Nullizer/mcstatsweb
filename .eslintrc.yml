@@ -1,0 +1,37 @@
+env:
+  browser: true
+  es6: true
+  node: true
+extends:
+  - 'plugin:vue/recommended'
+  - standard
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+parserOptions:
+  ecmaVersion: 2019
+  parser: '@typescript-eslint/parser'
+  sourceType: module
+plugins:
+  - vue
+  - '@typescript-eslint'
+rules:
+  comma-dangle: 'off'
+  vue/script-indent: ['warn', 2, { 'baseIndent': 1 }]
+  vue/singleline-html-element-content-newline: ['warn', {
+    ignores: ['router-link', 'label', 'li', 'button', 'span']
+  }]
+  vue/max-attributes-per-line: ['warn', {
+    singleline: 3,
+    multiline: {
+      max: 4,
+      allowFirstLine: true
+    }
+  }]
+overrides:
+  - {
+    files: ['*.vue'],
+    rules: {
+      indent: 'off'
+    }
+  }

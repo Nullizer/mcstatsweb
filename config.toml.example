@@ -1,0 +1,4 @@
+[api]
+world-dir = '/srv/spigot/world'
+[web]
+api-url = 'http://api.localhost/'
