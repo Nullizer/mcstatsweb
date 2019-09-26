@@ -5,3 +5,4 @@ dist/
 .rpt2_cache/
 /.*-*.json
 config.toml
+*.tar.*z
